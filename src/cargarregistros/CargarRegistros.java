@@ -29,9 +29,9 @@ public class CargarRegistros {
     }
 
     public Registro getRegistro(){
-        Sintomas sintomasDisponibles= new Sintomas();
-        cargarSintomasApp(this.sintomas, sintomasDisponibles);
-        return new Registro(new Date(), sintomasDisponibles);
+        Sintomas sintomasPaciente= new Sintomas();
+        cargarSintomasApp(this.sintomas, sintomasPaciente);
+        return new Registro(new Date(), sintomasPaciente);
     }
 
     /*public Registro guardarRegistro(){

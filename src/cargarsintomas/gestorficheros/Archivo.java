@@ -98,4 +98,10 @@ public class Archivo {
         return path;
     }
 
+    public Sintoma iniciarClaseSintoma(String nombreClase,String nombreSintoma){
+        Sintoma sintoma= iniciarClasesSintoma.iniciarClaseSintoma(nombreClase,nombreSintoma);
+
+        return sintoma;
+    }
+
 }

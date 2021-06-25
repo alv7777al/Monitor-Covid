@@ -103,8 +103,8 @@ public class Ventana extends JFrame implements ActionListener {
         model.addColumn("Nombre");
         model.addColumn("Tipo");
         model.addColumn("Accion");
-        //Sintomas sintomas= this.sintomasDisponibles;
-        Sintomas sintomas= archivo.leerSintomasArchivo();
+        Sintomas sintomas= this.sintomasDisponibles;
+        //Sintomas sintomas= archivo.leerSintomasArchivo();
         Object [] fila;
         for(Sintoma s : sintomas){
             fila= new Object[2];

@@ -31,7 +31,7 @@ public class CargarSintomas {
     }
 
     private void cargarSintomas(){
-         new Ventana();
+         new Ventana(this.sintomas);
 
     }
 

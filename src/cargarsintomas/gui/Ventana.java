@@ -31,8 +31,9 @@ public class Ventana extends JFrame implements ActionListener {
     private Sintomas sintomas;
     private Archivo archivo;
 
-    public Ventana(){
+    public Ventana(Sintomas sintomas){
 
+        this.sintomas= sintomas;
         this.archivo= new Archivo();
         tablaSintomas= new JTable();
         setSize(800,900);
@@ -106,9 +107,10 @@ public class Ventana extends JFrame implements ActionListener {
 
             model.addRow(fila);
         }*/
-        Sintomas sintomas= this.archivo.leerSintomasArchivo();
+        //Sintomas sintomas= this.archivo.leerSintomasArchivo();
+
         Object [] fila;
-        for(Sintoma s : sintomas){
+        for(Sintoma s : this.sintomas){
             fila= new Object[2];
             fila[0]= s.toString();
             fila[1]= s.getClass().getSimpleName();
@@ -133,6 +135,8 @@ public class Ventana extends JFrame implements ActionListener {
         if(this.archivo.guardarSintoma(nombreClase,nombreSintoma) != null){
             JOptionPane.showMessageDialog(null,"Registrado Exitosamente","Mensaje",1);
             txtNombreSintoma.setText("");
+            Sintoma sintomaCreado= this.archivo.iniciarClaseSintoma(nombreClase,nombreSintoma);
+            this.sintomas.add(sintomaCreado);
             cargarTabla();
 
         }else{

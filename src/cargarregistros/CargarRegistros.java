@@ -2,7 +2,7 @@ package cargarregistros;
 
 import cargarregistros.gui.Ventana;
 import cargarregistros.gestorficheros.Archivo;
-import cargarsintomas.gestorficheros.GestorFicheroSerializado;
+//import cargarsintomas.gestorficheros.GestorFicheroSerializado;
 import monitor.Registro;
 import monitor.Registros;
 import monitor.Sintomas;
@@ -13,8 +13,8 @@ public class CargarRegistros {
 
     private Registros registros;
     private Sintomas sintomas;
-    private GestorFicheroSerializado gestorFicheroSerializado;
-    private Archivo archivo;
+    //private GestorFicheroSerializado gestorFicheroSerializado;
+    //private Archivo archivo;
 
     public CargarRegistros(Sintomas sintomas){
 
